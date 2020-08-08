@@ -1,8 +1,11 @@
 # SmartCash Scripts
 SmartCash Linux Install Script
 
-## For smartcashd Node VPS Install  
+## For smartcashd Node VPS Install (Includes required SAPI for SmartNodes)
 curl -sSL https://raw.githubusercontent.com/SmartCash/SmartInstall/master/SmartInstallNode.sh | bash
+
+## For smartcashd Client VPS Install (with no SAPI database)
+curl -sSL https://raw.githubusercontent.com/SmartCash/SmartInstall/master/SmartInstallnoSAPI.sh | bash
 
 ## For smartcashd Node VPS Update to New Version (Use the Install for first time installations)
 curl -sSL https://raw.githubusercontent.com/SmartCash/SmartInstall/master/SmartUpgradeNode.sh | bash
