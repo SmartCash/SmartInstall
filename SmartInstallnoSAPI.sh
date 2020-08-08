@@ -12,7 +12,7 @@ chmod a+x ~/smartcashd ~/smartcash-cli
 # Create wallet directory and set to run when windows is closed.
 mkdir ~/.smartcash
 echo 'daemon=1' > ~/.smartcash/smartcash.conf
-echo 'sapi=1' > ~/.smartcash/smartcash.conf
+echo 'sapi=0' > ~/.smartcash/smartcash.conf
 echo '#smartnode=1' > ~/.smartcash/smartcash.conf
 echo '#smartnodeprivkey=' > ~/.smartcash/smartcash.conf
 
