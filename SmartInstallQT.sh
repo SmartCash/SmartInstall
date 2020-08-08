@@ -24,7 +24,7 @@ echo -e "${GREEN}Extracting the files"
 tar xzf $TEMP_FILE_PATH -C /tmp/
 rsync -a $TEMP_PATH/ $HOME/$USER_FOLDER_NAME/
 
-# Downloading bitcoin confidential icon
+# Downloading SmartCash icon
 echo -e "${GREEN}Downloading ${ORANGEBOLD}SmartCash ${GREEN}Icon PNG"
 mkdir -p $HOME/.icons/
 wget -q --show-progress $ICON_URL -O $HOME/.icons/$ICON_FILENAME.base64
@@ -35,6 +35,10 @@ rm $HOME/.icons/$ICON_FILENAME.base64
 # Create a shortcut on system
 echo -e "${GREEN}Creating symbol link"
 sudo ln -sf $HOME/$USER_FOLDER_NAME/bin/smartcash-qt /usr/bin/smartcash-qt
+
+#  Create location to store blocks and disable SAPI database.
+mkdir ~/.smartcash
+echo 'sapi=0' >> ~/.smartcash/smartcash.conf
 
 # Create the .desktop current file
 echo -e "${GREEN}Create the ${NC}.desktop ${GREEN}current file"
