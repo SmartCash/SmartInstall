@@ -17,7 +17,7 @@ echo '#smartnode=1' > ~/.smartcash/smartcash.conf
 echo '#smartnodeprivkey=' > ~/.smartcash/smartcash.conf
 
 # Start Wallet
-./smartcash && sleep 30 && ./smartcash-cli getinfo
+./smartcashd && sleep 30 && ./smartcash-cli getinfo
 
 # Create a wallet from mnemonic.  (required for 1.0.1+ wallets.)
 #./smartcash-cli extkeyimportmaster "$(./smartcash-cli mnemonic new | grep mnemonic | sed -e 's/.*: "//' -e 's/",//')"
