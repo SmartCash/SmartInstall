@@ -21,4 +21,4 @@ echo 'To start ./smartcashd'
 echo 'If you don't already have a keep alive script add this crontab entry to keep your SmartNode running if the server restarts or is accidentally stopped.'
 echo 'crontab -e  choose nano as an editor and enter at end of file'
 echo '*/5 * * * * pidof smartcashd || ~/smartcashd'
-echo 'Control x and y to save and quit"
+echo 'Control x and y to save and quit'
