@@ -17,7 +17,9 @@ echo '#smartnode=1' >> ~/.smartcash/smartcash.conf
 echo '#smartnodeprivkey=' >> ~/.smartcash/smartcash.conf
 
 # Start Wallet
-./smartcashd && sleep 30 && ./smartcash-cli getinfo
+./smartcashd && sleep 10 
+echo 'A few more seconds and let's see if it is downloading.'
+sleep 10 && ./smartcash-cli getinfo
 
 # Create a wallet from mnemonic.  (required for 1.0.1+ wallets.)
 #./smartcash-cli extkeyimportmaster "$(./smartcash-cli mnemonic new | grep mnemonic | sed -e 's/.*: "//' -e 's/",//')"
@@ -30,3 +32,7 @@ echo '#smartnodeprivkey=' >> ~/.smartcash/smartcash.conf
 echo 'Installation finished.'
 echo 'To stop wallet ./smartcash-cli stop'
 echo 'To start ./smartcashd'
+echo 'Please add a keep alive setting as a crontab entry to keep your SmartNode running if the server restarts or is accidentally stopped.'
+echo 'crontab -e  choose nano as an editor and enter at end of file'
+echo '*/5 * * * * pidof smartcashd || ~/smartcashd'
+echo 'Control x and y to save and quit"
