@@ -12,13 +12,13 @@ cp smartcash-1.3.0/bin/smartcash-cli ~/
 chmod a+x ~/smartcashd ~/smartcash-cli
 echo 'sapi=1' >> ~/.smartcash/smartcash.conf && sleep 2
 ~/smartcashd && sleep 15
-echo 'A few more seconds and we will check.'
+echo 'A few more seconds and we will check downloading status.'
 sleep 15 && ~/smartcash-cli getinfo
 
 echo 'Upgrade finished.'
 echo 'To stop wallet ./smartcash-cli stop'
 echo 'To start ./smartcashd'
-echo 'If you don't already have a keep alive script add this crontab entry to keep your SmartNode running if the server restarts or is accidentally stopped.'
-echo 'crontab -e  choose nano as an editor and enter at end of file'
+echo "If you don't already have a keep alive script add this crontab entry to keep your SmartNode running if the server restarts or is accidentally stopped."
+echo 'Enter "crontab -e" and choose nano as an editor and enter the following line at end of file'
 echo '*/5 * * * * pidof smartcashd || ~/smartcashd'
-echo 'Control x and y to save and quit'
+echo 'Use Control x and y to save and quit'
