@@ -1,6 +1,6 @@
 #!/bin/bash
 echo 'Downloading and extracting wallet files'
-wget "https://github.com/SmartCash/Core-Smart/releases/download/v1.3.0/smartcash-1.3.0-x86_64-linux-gnu.tar.gz" -O - | tar -xz
+wget "https://github.com/SmartCash/Core-Smart/releases/download/v1.3.1/smartcash-1.3.1-x86_64-linux-gnu.tar.gz" -O - | tar -xz
 
 echo 'Stopping and removing previous version'
 test -f ~/smartcash-cli && ~/smartcash-cli stop && sleep 15 && rm ~/smartcashd && rm ~/smartcash-cli && sleep 5
