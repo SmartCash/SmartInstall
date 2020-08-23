@@ -11,7 +11,7 @@ TEMP_PATH=/tmp/smartcash-1.3.0
 USER_FOLDER_NAME=SmartCash
 DESKTOP_FILENAME=SmartCash.desktop
 ICON_FILENAME=SmartCash.png
-WALLET_URL="https://github.com/SmartCash/Core-Smart/releases/download/v1.3.0/smartcash-1.3.0-x86_64-linux-gnu.tar.gz"
+WALLET_URL="https://github.com/SmartCash/Core-Smart/releases/download/v1.3.1/smartcash-1.3.1-x86_64-linux-gnu.tar.gz"
 ICON_URL="https://github.com/SmartCash/SmartInstall/blob/master/smartcash.png"
 
 
