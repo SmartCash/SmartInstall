@@ -7,8 +7,8 @@ test -f ~/smartcash-cli && ~/smartcash-cli stop && sleep 15 && rm ~/smartcashd &
 test -f /usr/bin/smartcash-cli && smartcash-cli stop && sleep 10 && echo 'Please remove the old smartcashd with apt remove smartcashd' && sleep 10
 
 echo 'Copying files to home directory and setting permissions'
-cp smartcash-1.3.0/bin/smartcashd ~/ 
-cp smartcash-1.3.0/bin/smartcash-cli ~/
+cp smartcash-1.3.1/bin/smartcashd ~/ 
+cp smartcash-1.3.1/bin/smartcash-cli ~/
 chmod a+x ~/smartcashd ~/smartcash-cli
 echo 'sapi=1' >> ~/.smartcash/smartcash.conf && sleep 2
 ~/smartcashd && sleep 15
@@ -21,4 +21,12 @@ echo 'To start ./smartcashd'
 echo "If you don't already have a keep alive script add this crontab entry to keep your SmartNode running if the server restarts or is accidentally stopped."
 echo 'Enter "crontab -e" and choose nano as an editor and enter the following line at end of file'
 echo '*/5 * * * * pidof smartcashd || ~/smartcashd'
+echo "Remove line with makerun script as this will reference the old version"
 echo 'Use Control x and y to save and quit'
+echo "To remove blocks if stuck or requested to get a clean sync" 
+echo "./smartcash-cli stop"
+echo "cd .smartcash"
+echo "only run the next command on a vps that doesn't have funds.
+echo "rm -r !(@(smartcash.conf|wallet.dat))"
+echo "cd .."
+echo "./smartcashd"
