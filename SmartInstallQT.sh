@@ -7,11 +7,11 @@ NC='\033[0m' # No Color
 
 # Contants
 TEMP_FILE_PATH=/tmp/smartcash.tar.gz
-TEMP_PATH=/tmp/smartcash-1.3.1
+TEMP_PATH=/tmp/smartcash-1.3.2
 USER_FOLDER_NAME=SmartCash
 DESKTOP_FILENAME=SmartCash.desktop
 ICON_FILENAME=SmartCash.png
-WALLET_URL="https://github.com/SmartCash/Core-Smart/releases/download/v1.3.1/smartcash-1.3.1-x86_64-linux-gnu.tar.gz"
+WALLET_URL="https://github.com/SmartCash/Core-Smart/releases/download/v1.3.2/smartcash-1.3.2-x86_64-linux-gnu.tar.gz"
 ICON_URL="https://github.com/SmartCash/SmartInstall/blob/master/smartcash.png"
 
 
@@ -42,7 +42,7 @@ echo 'sapi=0' >> ~/.smartcash/smartcash.conf
 
 # Create the .desktop current file
 echo -e "${GREEN}Create the ${NC}.desktop ${GREEN}current file"
-echo -e '[Desktop Entry]\nVersion=1.3.1\nName=SmartCash Desktop Wallet\nName[en_US]=SmartCash Desktop Wallet\nName[pt_BR]=Carteira Desktop SmartCash\nGenericName=SmartCash Wallet\nGenericName[en_US]=SmartCash Wallet\nGenericName[pt_BR]=Carteira SmartCash\nComment=Privacy Simplified\nComment[en_US]=Privacy Simplified\nComment[pt_BR]=Privacidade simplificada\nExec=smartcash-qt\nIcon=smartcash\nTerminal=false\nStartupWMClass=bitcoinc-qt\nStartupNotify=true\nType=Application\nCategories=Finance;Internet;Network;\nMimeType=x-scheme-handler/smartcash;' | tee ~/.local/share/applications/$DESKTOP_FILENAME
+echo -e '[Desktop Entry]\nVersion=1.3.2\nName=SmartCash Desktop Wallet\nName[en_US]=SmartCash Desktop Wallet\nName[pt_BR]=Carteira Desktop SmartCash\nGenericName=SmartCash Wallet\nGenericName[en_US]=SmartCash Wallet\nGenericName[pt_BR]=Carteira SmartCash\nComment=Privacy Simplified\nComment[en_US]=Privacy Simplified\nComment[pt_BR]=Privacidade simplificada\nExec=smartcash-qt\nIcon=smartcash\nTerminal=false\nStartupWMClass=bitcoinc-qt\nStartupNotify=true\nType=Application\nCategories=Finance;Internet;Network;\nMimeType=x-scheme-handler/smartcash;' | tee ~/.local/share/applications/$DESKTOP_FILENAME
 chmod +x ~/.local/share/applications/$DESKTOP_FILENAME
 
 echo -e "${GREEN}Installation finish"
