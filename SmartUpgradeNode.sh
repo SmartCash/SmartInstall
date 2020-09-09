@@ -10,11 +10,12 @@ echo 'Copying files to home directory and setting permissions'
 cp smartcash-1.3.2/bin/smartcashd ~/ 
 cp smartcash-1.3.2/bin/smartcash-cli ~/
 chmod a+x ~/smartcashd ~/smartcash-cli
-echo 'sapi=1' >> ~/.smartcash/smartcash.conf && sleep 2
-~/smartcashd && sleep 15
+[[ -z $(grep sapi=1 ~/.smartcash/smartcash.conf) ]] && echo 'sapi=1' >> ~/.smartcash/smartcash.conf || echo "SAPI check complete" 
+echo "Going to reindex to clean to generate new rewards data."
+sleep 2 && ~/smartcashd -reindex && sleep 15
 echo 'A few more seconds and we will check downloading status.'
 sleep 15 && ~/smartcash-cli getinfo
-
+echo "You can also use tail ~/.smartcash/debug.log if the getinfo doesn't respond while reindexing"
 echo 'Upgrade finished.'
 echo 'To stop wallet ./smartcash-cli stop'
 echo 'To start ./smartcashd'
@@ -26,7 +27,7 @@ echo 'Use Control x and y to save and quit'
 echo "To remove blocks if stuck or requested to get a clean sync" 
 echo "./smartcash-cli stop"
 echo "cd .smartcash"
-echo "only run the next command on a vps that doesn't have funds.
+echo "only run the next command on a vps that doesn't have funds."
 echo "rm -r !(@(smartcash.conf|wallet.dat))"
 echo "cd .."
 echo "./smartcashd"
