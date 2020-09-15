@@ -1,7 +1,7 @@
 #!/bin/bash
 # Downloading the wallet
 echo 'Downloading and extracting wallet files'
-wget "https://github.com/SmartCash/Core-Smart/releases/download/v1.3.2/smartcash-1.3.2-x86_64-linux-gnu.tar.gz" -O - | tar -xz
+wget "https://github.com/SmartCash/Core-Smart/releases/download/v1.3.3/smartcash-1.3.3-x86_64-linux-gnu.tar.gz" -O - | tar -xz
 
 # Extract the files and give executable permissions
 echo 'Copying files to home directory'
