@@ -12,9 +12,23 @@ chmod a+x ~/smartcashd ~/smartcash-cli
 # Create wallet directory and set to run when windows is closed.
 mkdir ~/.smartcash
 echo 'daemon=1' > ~/.smartcash/smartcash.conf
+echo 'listen=1' >> ~/.smartcash/smartcash.conf
+echo 'maxconnections=64' >> ~/.smartcash/smartcash.conf
+echo 'server=1' >> ~/.smartcash/smartcash.conf
+echo 'port=9678' >> ~/.smartcash/smartcash.conf
+echo '#Use for rpc connections' >> ~/.smartcash/smartcash.conf
+echo '#rpcuser=xxxxxx' >> ~/.smartcash/smartcash.conf
+echo '#rpcpassword=xxxxxxxxxx' >> ~/.smartcash/smartcash.conf
+echo '#rpcport=9679' >> ~/.smartcash/smartcash.conf
+echo '#rpcallowip=127.0.0.1 >> ~/.smartcash/smartcash.conf
+echo '#Required for Smartnode' >> ~/.smartcash/smartcash.conf
 echo 'sapi=1' >> ~/.smartcash/smartcash.conf
+echo 'sapiport=8080' >> ~/.smartcash/smartcash.conf
+echo '#Remove the hash mark for these two lines and add the key from your local wallet smartnode tab'
 echo '#smartnode=1' >> ~/.smartcash/smartcash.conf
 echo '#smartnodeprivkey=' >> ~/.smartcash/smartcash.conf
+echo 'Add this line if node can't automatically figure it out.'
+echo '#externalip=X.X.X.X' >> ~/.smartcash/smartcash.conf
 
 # Start Wallet
 ./smartcashd && sleep 10 
