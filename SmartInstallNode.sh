@@ -28,7 +28,7 @@ echo '#Remove the hash mark for these two lines and add the key from your local 
 echo '#smartnode=1' >> ~/.smartcash/smartcash.conf
 echo '#smartnodeprivkey=' >> ~/.smartcash/smartcash.conf
 echo "#Add this line if node can't automatically figure it out." >> ~/.smartcash/smartcash.conf
-echo '#externalip=X.X.X.X' >> ~/.smartcash/smartcash.conf
+echo 'externalip='$(dig @resolver1.opendns.com ANY myip.opendns.com +short) >> ~/.smartcash/smartcash.conf
 
 # Start Wallet
 sleep 2 && ./smartcashd && sleep 10 
