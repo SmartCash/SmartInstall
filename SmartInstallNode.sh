@@ -54,6 +54,6 @@ echo "After you setup your local wallet, complete the SmartNodes tab with your S
 echo "Place the key in the smartcash.conf here by doing this"
 echo "stop  with ./smartcash-cli stop"
 echo "nano .smartcash/smartcash.conf"
-echo "Remove # by the smartnode=1 and smartnodeprvkey= lines and past your key after the smartnodeprivkey="
+echo "Remove # by the smartnode=1 and smartnodeprvkey= lines and paste your key after the smartnodeprivkey="
 echo "control x and y to save and start with ./smartcashd"
-echo "Issue a start on your local wallet by right clicking and start alias."
+echo "After node is synced issue a start on your local wallet by right clicking on the entry and start alias."
