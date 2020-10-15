@@ -27,7 +27,7 @@ echo 'sapiport=8080' >> ~/.smartcash/smartcash.conf
 echo '#Remove the hash mark for these two lines and add the key from your local wallet smartnode tab' >> ~/.smartcash/smartcash.conf
 echo '#smartnode=1' >> ~/.smartcash/smartcash.conf
 echo '#smartnodeprivkey=' >> ~/.smartcash/smartcash.conf
-echo '#Add this line if node can't automatically figure it out.'
+echo "#Add this line if node can't automatically figure it out." >> ~/.smartcash/smartcash.conf
 echo '#externalip=X.X.X.X' >> ~/.smartcash/smartcash.conf
 
 # Start Wallet
@@ -52,7 +52,8 @@ echo '*/5 * * * * pidof smartcashd || ~/smartcashd'
 echo 'Control x and y to save and quit'
 echo "After you setup your local wallet, complete the SmartNodes tab with your SmartNode info and copy your smartnode key."
 echo "Place the key in the smartcash.conf here by doing this"
+echo "stop  with ./smartcash-cli stop"
 echo "nano .smartcash/smartcash.conf"
 echo "Remove # by the smartnode=1 and smartnodeprvkey= lines and past your key after the smartnodeprivkey="
-echo "control x and y to save and restart with ./smartcash-cli stop && sleep 15 && ./smartcashd"
+echo "control x and y to save and start with ./smartcashd"
 echo "Issue a start on your local wallet by right clicking and start alias."
