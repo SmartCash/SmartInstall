@@ -16,11 +16,11 @@ echo 'listen=1' >> ~/.smartcash/smartcash.conf
 echo 'maxconnections=64' >> ~/.smartcash/smartcash.conf
 echo 'port=9678' >> ~/.smartcash/smartcash.conf
 echo '#Use for rpc connections' >> ~/.smartcash/smartcash.conf
-echo '#rpcuser=xxxxxx' >> ~/.smartcash/smartcash.conf
-echo '#rpcpassword=xxxxxxxxxx' >> ~/.smartcash/smartcash.conf
-echo '#rpcport=9679' >> ~/.smartcash/smartcash.conf
+echo 'rpcuser='$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 12) >> ~/.smartcash/smartcash.conf
+echo 'rpcpassword='$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32) >> ~/.smartcash/smartcash.conf
+echo 'rpcport=9679' >> ~/.smartcash/smartcash.conf
 echo '#rpcallowip=127.0.0.1' >> ~/.smartcash/smartcash.conf
-echo '#server=1' >> ~/.smartcash/smartcash.conf
+echo 'server=1' >> ~/.smartcash/smartcash.conf
 echo '#Required for Smartnode' >> ~/.smartcash/smartcash.conf
 echo 'sapi=1' >> ~/.smartcash/smartcash.conf
 echo 'sapiport=8080' >> ~/.smartcash/smartcash.conf
