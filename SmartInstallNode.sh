@@ -4,9 +4,9 @@ echo 'Downloading and extracting wallet files'
 wget "https://github.com/SmartCash/Core-Smart/releases/download/v1.3.3/smartcash-1.3.3-x86_64-linux-gnu.tar.gz" -O - | tar -xz
 
 # Extract the files and give executable permissions
-echo 'Copying files to home directory'
+echo 'Copying files to home directory' && sleep 1
 cp smartcash-1.3.3/bin/smartcashd ~/
-cp smartcash-1.3.3/bin/smartcash-cli ~/
+cp smartcash-1.3.3/bin/smartcash-cli ~/ && sleep 1
 chmod a+x ~/smartcashd ~/smartcash-cli
 
 # Create wallet directory and set to run when windows is closed.
