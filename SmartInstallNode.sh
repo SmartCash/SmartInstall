@@ -31,7 +31,7 @@ echo '#Add this line if node can't automatically figure it out.'
 echo '#externalip=X.X.X.X' >> ~/.smartcash/smartcash.conf
 
 # Start Wallet
-./smartcashd && sleep 10 
+sleep 2 && ./smartcashd && sleep 10 
 echo "A few more seconds and let's see if it is downloading."
 sleep 10 && ./smartcash-cli getinfo
 
