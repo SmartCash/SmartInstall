@@ -20,8 +20,8 @@ echo '#rpcuser=xxxxxx' >> ~/.smartcash/smartcash.conf
 echo '#rpcpassword=xxxxxxxxxx' >> ~/.smartcash/smartcash.conf
 echo '#rpcport=9679' >> ~/.smartcash/smartcash.conf
 echo '#rpcallowip=127.0.0.1' >> ~/.smartcash/smartcash.conf
+echo '#server=1' >> ~/.smartcash/smartcash.conf
 echo '#Required for Smartnode' >> ~/.smartcash/smartcash.conf
-echo 'server=1' >> ~/.smartcash/smartcash.conf
 echo 'sapi=1' >> ~/.smartcash/smartcash.conf
 echo 'sapiport=8080' >> ~/.smartcash/smartcash.conf
 echo '#Remove the hash mark for these two lines and add the key from your local wallet smartnode tab' >> ~/.smartcash/smartcash.conf
