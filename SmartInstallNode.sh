@@ -27,8 +27,8 @@ echo 'sapiport=8080' >> ~/.smartcash/smartcash.conf
 echo '#Remove the hash mark for these two lines and add the key from your local wallet smartnode tab' >> ~/.smartcash/smartcash.conf
 echo '#smartnode=1' >> ~/.smartcash/smartcash.conf
 echo '#smartnodeprivkey=' >> ~/.smartcash/smartcash.conf
-echo "#Add this line if node can't automatically figure it out." >> ~/.smartcash/smartcash.conf
-echo 'externalip='$(dig @resolver1.opendns.com ANY myip.opendns.com +short) >> ~/.smartcash/smartcash.conf
+echo "#Uncomment this line if node fails to start because of missing external ip." >> ~/.smartcash/smartcash.conf
+echo '#externalip='$(dig +short myip.opendns.com @resolver1.opendns.com) >> ~/.smartcash/smartcash.conf
 
 # Start Wallet
 sleep 2 && ./smartcashd && sleep 10 
