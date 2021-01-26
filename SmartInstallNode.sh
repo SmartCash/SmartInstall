@@ -5,7 +5,7 @@ wget "https://github.com/SmartCash/Core-Smart/releases/download/v2.0.0/smartcash
 
 # Extract the files and give executable permissions
 echo 'Copying files to home directory' && sleep 1
-cp smartcash-3.0.0/bin/smartcashd ~/
+cp smartcash-2.0.0/bin/smartcashd ~/
 cp smartcash-2.0.0/bin/smartcash-cli ~/ && sleep 1
 chmod a+x ~/smartcashd ~/smartcash-cli
 
