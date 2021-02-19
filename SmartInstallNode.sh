@@ -32,7 +32,7 @@ echo '#externalip='$(dig +short myip.opendns.com @resolver1.opendns.com) >> ~/.s
 
 # Start Wallet
 sleep 2 && ./smartcashd && sleep 10 
-echo "A few more seconds and let's see if it is downloading."
+echo "A few more seconds and let's see if it is done loading."
 sleep 10 && ./smartcash-cli getinfo
 
 # Create a wallet from mnemonic.  (required for 1.0.1+ wallets.)
