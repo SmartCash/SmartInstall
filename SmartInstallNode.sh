@@ -1,12 +1,12 @@
 #!/bin/bash
 # Downloading the wallet
 echo 'Downloading and extracting wallet files'
-wget "https://github.com/SmartCash/Core-Smart/releases/download/v2.0.2/smartcash-2.0.2-x86_64-linux-gnu.tar.gz" -O - | tar -xz
+wget "https://github.com/SmartCash/Core-Smart/releases/download/v2.0.3/smartcash-2.0.3-x86_64-linux-gnu.tar.gz" -O - | tar -xz
 
 # Extract the files and give executable permissions
 echo 'Copying files to home directory' && sleep 1
-cp smartcash-2.0.2/bin/smartcashd ~/
-cp smartcash-2.0.2/bin/smartcash-cli ~/ && sleep 1
+cp smartcash-2.0.3/bin/smartcashd ~/
+cp smartcash-2.0.3/bin/smartcash-cli ~/ && sleep 1
 chmod a+x ~/smartcashd ~/smartcash-cli
 
 # Create wallet directory and set to run when windows is closed.
@@ -50,16 +50,16 @@ echo 'Please add a keep alive setting as a crontab entry to keep your SmartNode 
 echo 'crontab -e  choose nano as an editor and enter at end of file'
 echo '*/5 * * * * pidof smartcashd || ~/smartcashd'
 echo 'Control x and y to save and quit'
-echo "After you setup your local wallet, complete the SmartNodes tab with your SmartNode info and copy your smartnode key."
+echo "---After you setup your local wallet, complete the SmartNodes tab with your SmartNode info and copy your smartnode key.---"
 echo "Place the key in the smartcash.conf here by doing this"
 echo "stop  with ./smartcash-cli stop"
 echo "nano .smartcash/smartcash.conf"
 echo "Remove # by the smartnode=1 and smartnodeprvkey= lines and paste your key after the smartnodeprivkey="
 echo "control x and y to save and start with ./smartcashd"
 echo "After node is synced issue a start on your local wallet by right clicking on the entry and start alias."
-echo "A swap file is needed if Ram is less than 4GB"
+echo "Port 8080 and 9678 must be open to outside the network"
+echo "---A swap file is needed if RAM is less than 4GB---"
 echo "sudo fallocate -l 4G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile"
 echo "Edit /etc/fstab and add line"
 echo "sudo nano /etc/fstab"
 echo "Paste this lline at end of file  /swapfile swap swap defaults 0 0  and close with Control x and y"
-
