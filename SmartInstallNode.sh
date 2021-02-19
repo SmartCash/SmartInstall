@@ -40,8 +40,8 @@ sleep 10 && ./smartcash-cli getinfo
 
 # Create a shortcut on system - Unhash if desired
 #echo 'Creating symbol link'
-#ln -sf ~/smartcash-2.0.2/bin/smartcashd /usr/bin/smartcashd
-#ln -sf ~/smartcash-2.0.2/bin/smartcash-cli /usr/bin/smartcash-cli
+#ln -sf ~/smartcash-2.0.3/bin/smartcashd /usr/bin/smartcashd
+#ln -sf ~/smartcash-2.0.3/bin/smartcash-cli /usr/bin/smartcash-cli
 
 echo 'Installation finished.'
 echo 'To stop wallet ./smartcash-cli stop'
