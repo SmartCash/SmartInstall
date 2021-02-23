@@ -43,6 +43,27 @@ sleep 10 && ./smartcash-cli getinfo
 #ln -sf ~/smartcash-2.0.3/bin/smartcashd /usr/bin/smartcashd
 #ln -sf ~/smartcash-2.0.3/bin/smartcash-cli /usr/bin/smartcash-cli
 
+echo 'To stop wallet ./smartcash-cli stop' > help
+echo 'To start ./smartcashd' >> help
+echo 'Please add a keep alive setting as a crontab entry to keep your SmartNode running if the server restarts or is accidentally stopped.' >> help
+echo 'crontab -e  choose nano as an editor and enter at end of file' >> help
+echo '*/5 * * * * pidof smartcashd || ~/smartcashd' >> help
+echo 'Control x and y to save and quit' >> help
+echo "---After you setup your local wallet, complete the SmartNodes tab with your SmartNode info and copy your smartnode key.---" >> help
+echo "Place the key in the smartcash.conf here by doing this" >> help
+echo "stop  with ./smartcash-cli stop" >> help
+echo "nano .smartcash/smartcash.conf" >> help
+echo "Remove # by the smartnode=1 and smartnodeprvkey= lines and paste your key after the smartnodeprivkey=" >> help
+echo "control x and y to save and start with ./smartcashd" >> help
+echo "After node is synced issue a start on your local wallet by right clicking on the entry and start alias." >> help
+echo "Port 8080 and 9678 must be open to outside the network" >> help
+echo "---A swap file is needed if RAM is less than 4GB---" >> help
+echo "sudo fallocate -l 4G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile" >> help
+echo "Edit /etc/fstab and add line" >> help
+echo "sudo nano /etc/fstab" >> help
+echo "Paste this lline at end of file  /swapfile swap swap defaults 0 0  and close with Control x and y" >> help
+echo "To show this help again type 'cat help'" >> help
+
 echo 'Installation finished.'
 echo 'To stop wallet ./smartcash-cli stop'
 echo 'To start ./smartcashd'
@@ -62,4 +83,5 @@ echo "---A swap file is needed if RAM is less than 4GB---"
 echo "sudo fallocate -l 4G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile"
 echo "Edit /etc/fstab and add line"
 echo "sudo nano /etc/fstab"
-echo "Paste this lline at end of file  /swapfile swap swap defaults 0 0  and close with Control x and y"
+echo "Paste this line at end of file  /swapfile swap swap defaults 0 0  and close with Control x and y"
+echo "To show this help again type 'cat help'"
