@@ -1,12 +1,12 @@
 #!/bin/bash
 # Downloading the wallet
 echo 'Downloading and extracting wallet files'
-wget "https://github.com/SmartCash/Core-Smart/releases/download/v2.0.3/smartcash-2.0.3-x86_64-linux-gnu.tar.gz" -O - | tar -xz
+wget "https://github.com/SmartCash/Core-Smart/releases/download/v2.0.4/smartcash-2.0.4-x86_64-linux-gnu.tar.gz" -O - | tar -xz
 
 # Extract the files and give executable permissions
 echo 'Copying files to home directory' && sleep 1
-cp smartcash-2.0.3/bin/smartcashd ~/
-cp smartcash-2.0.3/bin/smartcash-cli ~/ && sleep 1
+cp smartcash-2.0.4/bin/smartcashd ~/
+cp smartcash-2.0.4/bin/smartcash-cli ~/ && sleep 1
 chmod a+x ~/smartcashd ~/smartcash-cli
 
 # Create wallet directory and set to run when windows is closed.
@@ -40,8 +40,8 @@ sleep 10 && ./smartcash-cli getinfo
 
 # Create a shortcut on system - Unhash if desired
 #echo 'Creating symbol link'
-#ln -sf ~/smartcash-2.0.3/bin/smartcashd /usr/bin/smartcashd
-#ln -sf ~/smartcash-2.0.3/bin/smartcash-cli /usr/bin/smartcash-cli
+#ln -sf ~/smartcash-2.0.4/bin/smartcashd /usr/bin/smartcashd
+#ln -sf ~/smartcash-2.0.4/bin/smartcash-cli /usr/bin/smartcash-cli
 
 echo 'To stop wallet ./smartcash-cli stop' > help
 echo 'To start ./smartcashd' >> help
