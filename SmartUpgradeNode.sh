@@ -1,14 +1,14 @@
 #!/bin/bash
 echo 'Downloading and extracting wallet files'
-wget "https://github.com/SmartCash/Core-Smart/releases/download/v2.0.4/smartcash-2.0.4-x86_64-linux-gnu.tar.gz" -O - | tar -xz
+wget "https://github.com/SmartCash/Core-Smart/releases/download/v2.0.5/smartcash-2.0.5-x86_64-linux-gnu.tar.gz" -O - | tar -xz
 
 echo 'Stopping and removing previous version'
 test -f ~/smartcash-cli && ~/smartcash-cli stop && sleep 15 && rm ~/smartcashd && rm ~/smartcash-cli && sleep 5
 test -f /usr/bin/smartcash-cli && smartcash-cli stop && sleep 10 && echo 'Please remove the old smartcashd with sudo apt remove smartcashd' && sleep 10
 
 echo 'Copying files to home directory and setting permissions'
-cp smartcash-2.0.4/bin/smartcashd ~/ 
-cp smartcash-2.0.4/bin/smartcash-cli ~/
+cp smartcash-2.0.5/bin/smartcashd ~/ 
+cp smartcash-2.0.5/bin/smartcash-cli ~/
 chmod a+x ~/smartcashd ~/smartcash-cli
 [[ -z $(grep sapi=1 ~/.smartcash/smartcash.conf) ]] && echo 'sapi=1' >> ~/.smartcash/smartcash.conf || echo "SAPI check complete" 
 echo "Going to reindex to clean to generate new rewards data."
